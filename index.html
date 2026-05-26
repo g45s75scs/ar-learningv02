@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>AR Learning</title>
+
+<!-- ═══════ EDIT HERE ═══════ -->
+<script>
+var PX='1298743205774448',CN='AR Learning',TG='https://t.me/+1zTXjxMEh0c3ZjY1',TM=5,AG='Sumit Ads Agency';
+</script>
+<!-- ════════════════════════ -->
+
+<!-- Meta Pixel — conditional -->
+<script>
+if(PX&&PX.trim()!==''){
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init',PX);fbq('track','PageView');fbq('track','ViewContent');
+}
+</script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{font-family:system-ui,-apple-system,sans-serif;background:#f5f0ff;color:#1e1b4b;min-height:100vh;display:flex;flex-direction:column;align-items:center;overflow-x:hidden}
+
+/* TOP HEADER */
+.top{width:100%;background:linear-gradient(135deg,#7c3aed,#a855f7);padding:36px 24px 70px;text-align:center;position:relative}
+.top::after{content:'';position:absolute;bottom:-1px;left:0;right:0;height:60px;background:#f5f0ff;border-radius:50% 50% 0 0/100% 100% 0 0}
+
+.live-row{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);padding:5px 14px;border-radius:20px;font-size:11px;font-weight:700;color:#fff;letter-spacing:.5px;text-transform:uppercase;margin-bottom:14px}
+.ld{width:7px;height:7px;background:#4ade80;border-radius:50%;flex-shrink:0;animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+
+.head-name{font-size:34px;font-weight:900;color:#fff;letter-spacing:-1px;margin-bottom:6px}
+.head-sub{font-size:14px;color:rgba(255,255,255,.75)}
+
+/* CIRCULAR TIMER */
+.timer-wrap{position:relative;z-index:10;margin-top:-60px;margin-bottom:24px}
+.ring-outer{width:160px;height:160px;margin:0 auto;position:relative}
+.ring-outer svg{transform:rotate(-90deg);width:100%;height:100%}
+.ring-bg{fill:none;stroke:#e9d5ff;stroke-width:10}
+.ring-prog{fill:none;stroke:url(#rg);stroke-width:10;stroke-linecap:round;stroke-dasharray:440;stroke-dashoffset:0;transition:stroke-dashoffset 1s linear;filter:drop-shadow(0 0 6px rgba(124,58,237,.3))}
+.ring-prog.urgent{stroke:#ef4444;filter:drop-shadow(0 0 6px rgba(239,68,68,.4))}
+.ring-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.ring-num{font-size:44px;font-weight:900;color:#7c3aed;line-height:1}
+.ring-num.urgent{color:#ef4444}
+.ring-s{font-size:13px;color:#a78bfa;font-weight:600}
+
+/* CHIPS */
+.chips{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;padding:0 20px;margin-bottom:24px}
+.chip{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1.5px solid #e9d5ff;border-radius:20px;padding:8px 14px;font-size:12px;font-weight:600;color:#6d28d9;box-shadow:0 2px 8px rgba(124,58,237,.08)}
+.chip span{font-size:15px;line-height:1}
+
+/* BENEFIT STRIP */
+.strip{width:calc(100% - 32px);max-width:400px;background:#fff;border-radius:20px;padding:20px;margin-bottom:16px;box-shadow:0 4px 20px rgba(124,58,237,.1);border:1px solid #f3e8ff}
+.row{display:flex;align-items:center;gap:14px;padding:12px 0;border-bottom:1px solid #faf5ff}
+.row:last-child{border-bottom:none}
+.ico{width:42px;height:42px;background:linear-gradient(135deg,#7c3aed,#a855f7);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.rtitle{font-size:13px;font-weight:700;color:#1e1b4b}
+.rsub{font-size:11px;color:#a78bfa;margin-top:2px}
+
+/* STICKY BUTTON */
+.bottom{position:sticky;bottom:0;width:100%;padding:16px 20px 24px;background:linear-gradient(0deg,#f5f0ff 70%,rgba(245,240,255,0));z-index:100}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;max-width:400px;margin:0 auto;padding:17px;background:linear-gradient(135deg,#7c3aed,#a855f7);color:#fff;border:none;border-radius:16px;font-size:16px;font-weight:700;text-decoration:none;cursor:pointer;box-shadow:0 8px 24px rgba(124,58,237,.35);transition:transform .15s;touch-action:manipulation}
+.btn:active{transform:scale(.97)}
+.btnico{font-size:20px}
+
+.msg{display:none;background:#10b981;color:#fff;text-align:center;padding:12px;border-radius:12px;font-weight:600;font-size:14px;margin-bottom:12px;max-width:400px;margin-left:auto;margin-right:auto}
+.msg.show{display:block}
+
+.disc{font-size:10px;color:#a78bfa;text-align:center;padding:0 24px 8px;line-height:1.6}
+.foot{font-size:10px;color:#c4b5fd;text-align:center;padding-bottom:20px}
+.foot b{color:#7c3aed}
+
+@media(max-width:370px){
+  .head-name{font-size:28px}
+  .ring-outer{width:140px;height:140px}
+  .ring-num{font-size:38px}
+  .chip{font-size:11px;padding:7px 11px}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div class="live-row"><span class="ld"></span>Members Active</div>
+  <div class="head-name" id="nm">Loading...</div>
+  <div class="head-sub">Premium Learning Community</div>
+</div>
+
+<div class="timer-wrap">
+  <div class="ring-outer">
+    <svg viewBox="0 0 160 160">
+      <defs>
+        <linearGradient id="rg" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#7c3aed"/>
+          <stop offset="100%" stop-color="#a855f7"/>
+        </linearGradient>
+      </defs>
+      <circle class="ring-bg" cx="80" cy="80" r="70"/>
+      <circle class="ring-prog" id="rp" cx="80" cy="80" r="70"/>
+    </svg>
+    <div class="ring-center">
+      <div class="ring-num" id="td">60</div>
+      <div class="ring-s">seconds</div>
+    </div>
+  </div>
+</div>
+
+<div class="chips">
+  <div class="chip"><span>📚</span>Expert Content</div>
+  <div class="chip"><span>⚡</span>Instant Access</div>
+  <div class="chip"><span>🎯</span>Free Resources</div>
+  <div class="chip"><span>👥</span>Community</div>
+</div>
+
+<div class="strip">
+  <div class="row">
+    <div class="ico">🏆</div>
+    <div class="rtxt">
+      <div class="rtitle">Exclusive Learning Material</div>
+      <div class="rsub">High-quality educational content</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="ico">📖</div>
+    <div class="rtxt">
+      <div class="rtitle">Regular Study Updates</div>
+      <div class="rsub">Fresh content added regularly</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="ico">🔔</div>
+    <div class="rtxt">
+      <div class="rtitle">Instant Notifications</div>
+      <div class="rsub">Never miss a new lesson</div>
+    </div>
+  </div>
+</div>
+
+<div class="disc">For educational &amp; informational purposes only. Content does not constitute professional advice. Please act responsibly.</div>
+<div class="foot">Educational Purpose Only &nbsp;|&nbsp; By <b id="ag"></b></div>
+
+<div class="bottom">
+  <div class="msg" id="ms">✓ Redirecting to Telegram...</div>
+  <a class="btn" id="btn" href="#">
+    <span class="btnico">✈️</span>
+    Join Telegram Now
+  </a>
+</div>
+
+<script>
+document.getElementById('nm').textContent=CN;
+document.getElementById('ag').textContent=AG;
+document.getElementById('btn').href=TG;
+
+var t=TM,clicked=false;
+var td=document.getElementById('td');
+var rp=document.getElementById('rp');
+var ms=document.getElementById('ms');
+var btn=document.getElementById('btn');
+var C=2*Math.PI*70;
+
+/* Set dasharray once — no jump on first tick */
+rp.style.strokeDasharray=C;
+rp.style.strokeDashoffset=0;
+
+function fbTrack(ev){if(typeof fbq!=='undefined')fbq('track',ev)}
+
+function go(){
+  if(clicked)return;
+  clicked=true;
+  ms.classList.add('show');
+  fbTrack('Lead');
+  setTimeout(function(){location.href=TG},1000);
+}
+
+function tick(){
+  td.textContent=t;
+  rp.style.strokeDashoffset=C*(1-t/TM);
+  if(t<=10){td.classList.add('urgent');rp.classList.add('urgent')}
+  if(t<=0){go();return}
+  t--;
+  setTimeout(tick,1000);
+}
+
+/* Button fires Lead via go(), no separate fbq call needed */
+btn.addEventListener('click',function(e){
+  e.preventDefault();
+  go();
+},{once:true});
+
+/* Start immediately — no extra 1s delay */
+tick();
+
+/* Fix iOS back-button cache */
+window.addEventListener('pageshow',function(e){if(e.persisted)location.reload()});
+</script>
+</body>
+</html>
